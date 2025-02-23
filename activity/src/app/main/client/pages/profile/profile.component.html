@@ -1,0 +1,18 @@
+<div class="container" *ngIf="user">
+    <div class="image-container">
+        <img [src]="user.profile.image" alt="Profile Photo">
+    </div>
+    <div class="info-container">
+        <h2>{{ user.profile.name }}</h2>
+        <div class="info">
+            <p>Nickname: {{ user.profile.nickname}}</p>
+            <p>Birthday: {{ user.profile.birthday}}</p>
+            <p>Dream: {{ user.profile.dream}}</p>
+            <p>Talent: {{ user.profile.talent}}</p>
+            <p>Favorite TV Show: {{ user.profile.favshow}}</p>
+            <p>Favorite Movie: {{ user.profile.favmovie}}</p>
+            <p>Favorite Singer: {{ user.profile.favsinger}}</p>
+            <p>Favorite Food: {{ user.profile.food}}</p>
+        </div>
+    </div>
+</div>

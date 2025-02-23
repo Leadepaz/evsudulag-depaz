@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+}
+img {
+    width: 50vw;
+    height: 100vh;
+}
+.info-container {
+    text-align: center;
+    margin-top: 25vh;
+    margin-left: 50px;
+    width: 50vw;
+    height: 50vh;
+}
+.info {
+    border: 2px solid black;
+    text-align: left;
+    margin: auto;
+    max-width: 400px;
+    padding: 0 16px;
+}
