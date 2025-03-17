@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            
-            $table->renameColumn('usename', 'username');
+        //
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('product');
+            $table->integer('stock');
+            $table->string('status');
         });
     }
 
