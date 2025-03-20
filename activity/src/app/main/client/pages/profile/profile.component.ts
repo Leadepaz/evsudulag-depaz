@@ -9,9 +9,9 @@ import { UserModelData } from '../../model/UserModel';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  user: UserModelData | null;
+  // user: UserModelData | null;
 
   constructor(private userService: UserService) {
-    this.user = this.userService.getCurrentUser();
+    // this.user = this.userService.getCurrentUser();
   }
 }

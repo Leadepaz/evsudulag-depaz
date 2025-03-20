@@ -24,3 +24,11 @@
     margin-top: 10px;
     font-size: 14px;
   }
+
+  .errMsg {
+    background-color: rgba(202, 32, 32, 0.8);
+    color: #fff;
+    padding: 6px 0;
+    text-align: center;
+    border: 2px solid rgb(87, 11, 11);
+  }

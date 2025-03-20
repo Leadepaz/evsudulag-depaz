@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
 {
@@ -12,6 +13,10 @@ const routes: Routes = [
 {
   path: 'profile',
   component: ProfileComponent
+},
+{
+  path: 'dashboard',
+  component: DashboardComponent
 },
 {
   path: '',

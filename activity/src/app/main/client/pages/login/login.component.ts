@@ -26,12 +26,23 @@ export class LoginComponent {
     return this.login.get('password');
   }
 
+  errMsg: string = '';
+
   onLogin() {
-    const { username, password } = this.login.value;
-    if (this.userService.login(username, password)) {
-      this.router.navigate(['/main/profile']);
-    } else {
-      console.log('error');
-    }
+    this.userService.login(this.login.value).subscribe({
+      next: (data) => {
+        if (data?.user) {
+          this.router.navigate(['/main/dashboard']);
+          this.errMsg = ''; 
+        }
+      },
+      error: (err) => {
+        if (err.status === 401) {
+          this.errMsg = 'Invalid username or password.';
+        } else {
+          this.errMsg = 'Something went wrong. Please try again.';
+        }
+      }
+    });
   }
 }
